@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  h1.h1.mb-3.font-weight-normal= account.email
+  
+  p You have logged in successfully.
+    |
+    |
+    a(href="/logout") Logout
+    | .
+    
+  h3.h3 Account Info
+  
+  table.table.table-striped
+    tbody
+      tr
+        th Email
+        td= account.email
+      tr
+        th Logins
+        td= account.logins
+      tr
+        th Inserted
+        td= account.inserted
+      tr
+        th Updated
+        td= account.updated
+
+  h3.h3 Event Log (Last 10)
+
+  table.table.table-striped
+    thead
+      tr
+        th Date
+        th Event
+    tbody
+    for event in events
+      tr
+        td= event.now
+        td= event.msg

@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  if err
+    .alert.alert-danger= err
+  else
+    h1.h3.mb-3.font-weight-normal Email Verified
+    p You can now close this window.

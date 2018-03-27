@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  if err
+    .alert.alert-danger= err
+  else
+    h1.h3.mb-3.font-weight-normal Check your Email
+    p Confirm this code is the same in your email and click the link.
+    .alert.alert-info= human
+    p You will then be automatically logged in.
+    input#confirm(type="hidden" value=confirm)
+    input#email(type="hidden" value=email)
+
+block scripts
+  if !err
+    script(src="/s/js/confirm.js")

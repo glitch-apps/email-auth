@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  form.form-signin(method="post" action="/")
+    img.mb-4(src="https://cdn.glitch.com/dc6ef4db-f7a3-44cd-9e99-4be3585920c5%2Femail-auth.png?1521368662872" alt="" width="72" height="72")
+    h1.h3.mb-3.font-weight-normal Log In to
+      |
+      |
+      strong EmailAuth
+    label.sr-only(for="inputEmail") Email address
+    input#inputEmail.form-control(type="email" name="email" placeholder="you@yourdomain.com" required autofocus)
+    button.btn.btn-lg.btn-primary.btn-block(type="submit") Login

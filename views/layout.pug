@@ -1,0 +1,42 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='icon', href='/favicon.ico')
+
+    title= pagetitle || title
+
+    link(
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha256-LA89z+k9fjgMKQ/kq4OO2Mrf8VltYml/VES+Rg0fh20="
+      crossorigin="anonymous"
+    )
+    link(href='/s/css/styles.css', rel='stylesheet')
+
+  body
+
+    .container.text-center.content
+      block content
+      hr
+      p.mt-5.mb-3.text-muted
+        | &copy; <a href="https://chilts.org/">Andrew Chilton</a> 2018.
+        br
+        | Part of <a href="https://glitchapps.org/">GlitchApps</a>.
+        br
+        | Released as MIT License.
+
+    script(
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+    )
+    script(
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.bundle.min.js"
+      integrity="sha256-uz0BcnPtSHZ02XZthAHPRYIoWWrcwMOmAk9ErnFQkNs="
+      crossorigin="anonymous"
+    )
+    block scripts
